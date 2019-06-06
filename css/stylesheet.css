@@ -1,0 +1,19 @@
+.card{
+    height: 25vh;
+    width: 15vw;
+    background-image: url(../img/pokemon-card.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-bottom: 3.4vh;
+}
+
+.background{
+    height: 100vh;
+    width: auto;
+    background-image: url(../img/stadium-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+
