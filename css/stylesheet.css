@@ -1,10 +1,7 @@
-.card{
-    height: 25vh;
-    width: 15vw;
-    background-image: url(../img/pokemon-card.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    margin-bottom: 3.4vh;
+body{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
 }
 
 .background{
@@ -15,5 +12,42 @@
     background-repeat: no-repeat;
     background-position: top;
 }
+
+.card-wrapper{
+    perspective: 1000px;
+}
+
+.card{
+    height: 20vh;
+    width: 15vw;
+    margin-bottom: 3.4vh;
+    position: relative;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
+}
+
+.card:active{
+    transform: scale(0.97);
+    transition: transform .8s;
+}
+
+.card.flip {
+    transform: rotateY(180deg);
+}
+
+.back-face,
+ .front-face{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.front-face{
+    transform: rotateY(180deg);
+}
+
+
 
 
