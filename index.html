@@ -7,74 +7,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Jonas Pickholtz">
     <title>Pokemon Memory Game - Gotta Find Em' All!</title>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
         integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/stylesheet.css">
 </head>
 
 <body>
+    <div id="modal-wrapper" style="display:none;">
+        <div id="modal">
+            <div class="modal-title">You Won!</div>
+            <div class="message"></div>
+            <button onclick="restartGame()">Play again</button>
+        </div>
+    </div>
     <section class="background">
         <div class=" container">
+            <header>
+                <button onclick="restartGame()">New Game</button>
+            </header>
             <div class="row">
                 <div class="col-xs-3 card-wrapper">
-                    <div class="card">
-                        <img class="front-face" src="" alt="" />
+                    <div class="card" data-pokemon="charizard">
+                        <img class="front-face" src="./img/1.png" alt="charizard" />
                         <img class="back-face" src="./img/pokeball.png" alt="" />
                     </div>
-                    <div class="card">
-                        <img class="front-face" src="" alt="" />
+                    <div class="card" data-pokemon="pikachu">
+                        <img class="front-face" src="./img/2.png" alt="pikachu" />
                         <img class="back-face" src="./img/pokeball.png" alt="" />
                     </div>
-                    <div class="card">
-                        <img class="front-face" src="" alt="" />
-                        <img class="back-face" src="./img/pokeball.png" alt="" />
-                    </div>
-                </div>
-                <div class="col-xs-3 card-wrapper">
-                    <div class="card">
-                        <img class="front-face" src="" alt="" />
-                        <img class="back-face" src="./img/pokeball.png" alt="" />
-                    </div>
-                    <div class="card">
-                        <img class="front-face" src="" alt="" />
-                        <img class="back-face" src="./img/pokeball.png" alt="" />
-                    </div>
-                    <div class="card">
-                        <img class="front-face" src="" alt="" />
+                    <div class="card" data-pokemon="mu">
+                        <img class="front-face" src="./img/3.png" alt="mu" />
                         <img class="back-face" src="./img/pokeball.png" alt="" />
                     </div>
                 </div>
                 <div class="col-xs-3 card-wrapper">
-                    <div class="card">
-                        <img class="front-face" src="" alt="" />
+                    <div class="card" data-pokemon="snorlax">
+                        <img class="front-face" src="./img/4.png" alt="snorlax" />
                         <img class="back-face" src="./img/pokeball.png" alt="" />
                     </div>
-                    <div class="card">
-                        <img class="front-face" src="" alt="" />
+                    <div class="card" data-pokemon="gengar">
+                        <img class="front-face" src="./img/5.png" alt="gengar" />
                         <img class="back-face" src="./img/pokeball.png" alt="" />
                     </div>
-                    <div class="card">
-                        <img class="front-face" src="" alt="" />
+                    <div class="card" data-pokemon="mr-mime">
+                        <img class="front-face" src="./img/6.png" alt="mr-mime" />
                         <img class="back-face" src="./img/pokeball.png" alt="" />
                     </div>
                 </div>
                 <div class="col-xs-3 card-wrapper">
-                    <div class="card">
-                        <img class="front-face" src="" alt="" />
+                    <div class="card" data-pokemon="charizard">
+                        <img class="front-face" src="./img/1.png" alt="charizard" />
                         <img class="back-face" src="./img/pokeball.png" alt="" />
                     </div>
-                    <div class="card">
-                        <img class="front-face" src="" alt="" />
+                    <div class="card" data-pokemon="pikachu">
+                        <img class="front-face" src="./img/2.png" alt="pikachu" />
                         <img class="back-face" src="./img/pokeball.png" alt="" />
                     </div>
-                    <div class="card">
-                        <img class="front-face" src="" alt="" />
+                    <div class="card" data-pokemon="mu">
+                        <img class="front-face" src="./img/3.png" alt="mu" />
+                        <img class="back-face" src="./img/pokeball.png" alt="" />
+                    </div>
+                </div>
+                <div class="col-xs-3 card-wrapper">
+                    <div class="card" data-pokemon="snorlax">
+                        <img class="front-face" src="./img/4.png" alt="snorlax" />
+                        <img class="back-face" src="./img/pokeball.png" alt="" />
+                    </div>
+                    <div class="card" data-pokemon="gengar">
+                        <img class="front-face" src="./img/5.png" alt="gengar" />
+                        <img class="back-face" src="./img/pokeball.png" alt="" />
+                    </div>
+                    <div class="card" data-pokemon="mr-mime">
+                        <img class="front-face" src="./img/6.png" alt="mr-mime" />
                         <img class="back-face" src="./img/pokeball.png" alt="" />
                     </div>
                 </div>
             </div>
-
-
         </div>
     </section>
 
